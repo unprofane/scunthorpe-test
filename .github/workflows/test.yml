@@ -1,5 +1,5 @@
 # Typecheck and test every push, and run the free word-list libraries over
-# 1,000 items spread through the split, so a change to the harness shows.
+# 1,000 items spread through the split, so a change to the runner shows.
 name: test
 
 on:

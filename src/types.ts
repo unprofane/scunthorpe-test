@@ -1,5 +1,5 @@
 /**
- * The few names the harness shares with Unprofane's engine, written out so
+ * The few names the runner shares with Unprofane's engine, written out so
  * this repository stands on its own. Languages, contexts, severities and
  * evasion tags are plain strings here: the corpus file is their list.
  */

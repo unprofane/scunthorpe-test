@@ -7,7 +7,7 @@ import { runAdapter } from './runner.ts';
 
 const CORPUS = new URL('../data/scunthorpe-test-dev.jsonl', import.meta.url).pathname;
 
-describe('the harness', () => {
+describe('the runner', () => {
   const items = readCorpus(CORPUS, 'dev');
 
   it('reads the public dev split and nothing else', () => {
