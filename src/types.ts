@@ -9,3 +9,8 @@ export type EvasionTag = string;
 export type Context = string;
 export type Language = string;
 export type Severity = string;
+
+/** The lexicon a run read, which the monorepo's runner records by its
+ * manifest hash. Unprofane's word lists are not in this repository, so a
+ * run here names none. */
+export const MANIFEST: { hash?: string } = {};
