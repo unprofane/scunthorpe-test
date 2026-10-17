@@ -5,6 +5,7 @@
  */
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
+import { MANIFEST } from './types.ts';
 import type { Adapter, Prediction } from './adapter.ts';
 import type { CorpusItem } from './corpus.ts';
 import { report, type SystemReport } from './metrics.ts';
@@ -45,6 +46,9 @@ export interface RunResult {
   ranAt: string;
   split: string;
   corpus: string;
+  /** The lexicon the run read (its manifest hash), so a published number
+   * names the word lists behind it. Absent from runs before 2026-10-13. */
+  lexicon?: string;
   systems: SystemReport[];
 }
 
@@ -84,7 +88,13 @@ export async function runAll(
     if (firstError) log(`  first error: ${firstError}`);
     systems.push(r);
   }
-  const result: RunResult = { ranAt: new Date().toISOString(), split, corpus: corpusName, systems };
+  const result: RunResult = {
+    ranAt: new Date().toISOString(),
+    split,
+    corpus: corpusName,
+    lexicon: MANIFEST.hash,
+    systems,
+  };
   mkdirSync(RESULTS, { recursive: true });
   const file = join(
     RESULTS,

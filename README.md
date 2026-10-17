@@ -20,11 +20,11 @@ item is made, labelled and scored, and which systems may be run, is in
 
 ## Leaderboard
 
-The dev split, as unprofane.com prints it (`results/leaderboard.json`, generated 2026-10-12). Trap FPR is the share of innocent items a system flagged: lower is better. The Workers AI rows ran on a 600-item sample.
+The dev split, as unprofane.com prints it (`results/leaderboard.json`, generated 2026-10-17). Trap FPR is the share of innocent items a system flagged: lower is better. The Workers AI rows ran on a 600-item sample.
 
 | System | Version | Items | F1 | Precision | Recall | Trap FPR |
 |---|---|---|---|---|---|---|
-| unprofane-fast | 2026-09-29 | 15,530 | 0.918 | 0.996 | 0.851 | 0.0% |
+| unprofane-fast | 2026-09-29 | 15,530 | 0.919 | 0.996 | 0.852 | 0.0% |
 | workers-ai-llama-3.3-70b | @cf/meta/llama-3.3-70b-instruct-fp8-fast | 600 | 0.909 | 0.957 | 0.866 | 6.0% |
 | openai-moderation | omni-moderation-latest | 15,501 | 0.553 | 0.948 | 0.390 | 3.2% |
 | obscenity | 0.4.6 | 15,501 | 0.364 | 0.930 | 0.227 | 21.2% |

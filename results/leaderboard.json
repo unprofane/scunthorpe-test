@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T11:25:45.398Z",
+  "generatedAt": "2026-10-17T04:12:59.062Z",
   "split": "dev",
   "systems": [
     {
@@ -7,30 +7,64 @@
       "corpus": "scunthorpe-test.jsonl",
       "version": "2026-09-29",
       "n": 15530,
-      "f1": 0.9177660510114336,
-      "precision": 0.9964191931248508,
-      "recall": 0.8506215610352558,
+      "f1": 0.9188358045030204,
+      "precision": 0.9964268699380657,
+      "recall": 0.8524556755655186,
       "trapFpr": 0,
-      "p50": 0.39133399999991525,
-      "p95": 2.998790999999983,
+      "traps": {
+        "place": {
+          "fpr": 0,
+          "n": 76
+        },
+        "surname": {
+          "fpr": 0,
+          "n": 95
+        },
+        "word": {
+          "fpr": 0,
+          "n": 228
+        },
+        "animal": {
+          "fpr": 0,
+          "n": 47
+        },
+        "tool": {
+          "fpr": 0,
+          "n": 14
+        },
+        "brand": {
+          "fpr": 0,
+          "n": 19
+        },
+        "medical": {
+          "fpr": 0,
+          "n": 26
+        },
+        "place-marked": {
+          "fpr": 0,
+          "n": 24
+        }
+      },
+      "p50": 0.3779580000000351,
+      "p95": 2.845291999999972,
       "costPer1k": 0,
       "evasion": {
-        "leetspeak": 0.9634615384615385,
+        "leetspeak": 0.9798076923076923,
         "homoglyph": 0.9962073324905183,
-        "separator": 0.9039351851851852,
+        "separator": 0.9236111111111112,
         "zero_width": 0.9969088098918083,
         "repeated_chars": 0.8932038834951457,
-        "diacritics": 0.945859872611465,
+        "diacritics": 0.9506369426751592,
         "fullwidth": 1,
         "combining_marks": 1,
         "mixed_script": 1,
         "phonetic": 0.9578313253012049,
         "reversed": 0.9953379953379954,
         "concatenation": 0.9485981308411215,
-        "case_mixing": 0.9411764705882353
+        "case_mixing": 0.9459459459459459
       },
       "byLanguage": {
-        "en": 0.9153623530801488,
+        "en": 0.9165142486282376,
         "und": 0,
         "ar": 0.9473684210526316,
         "de": 0.9375,
@@ -47,7 +81,40 @@
         "tr": 0.9818181818181818,
         "ja": 0.9545454545454545
       },
-      "file": "2026-10-12-11-25-45-dev.json"
+      "byLanguageN": {
+        "en": 13735,
+        "und": 1111,
+        "ar": 72,
+        "de": 53,
+        "es": 51,
+        "fr": 35,
+        "he": 69,
+        "hi": 32,
+        "id": 51,
+        "it": 39,
+        "nl": 44,
+        "pl": 46,
+        "pt": 33,
+        "ru": 83,
+        "tr": 29,
+        "ja": 47
+      },
+      "evasionN": {
+        "leetspeak": 1040,
+        "homoglyph": 791,
+        "separator": 864,
+        "zero_width": 647,
+        "repeated_chars": 824,
+        "diacritics": 628,
+        "fullwidth": 408,
+        "combining_marks": 410,
+        "mixed_script": 391,
+        "phonetic": 498,
+        "reversed": 429,
+        "concatenation": 428,
+        "case_mixing": 629
+      },
+      "file": "2026-10-17-04-12-58-dev.json"
     },
     {
       "adapter": "obscenity",
@@ -58,6 +125,36 @@
       "precision": 0.9297071129707113,
       "recall": 0.22650356778797145,
       "trapFpr": 0.21188118811881188,
+      "traps": {
+        "place": {
+          "fpr": 0.23684210526315788,
+          "n": 76
+        },
+        "surname": {
+          "fpr": 0.2,
+          "n": 95
+        },
+        "word": {
+          "fpr": 0.12719298245614036,
+          "n": 228
+        },
+        "animal": {
+          "fpr": 0.5319148936170213,
+          "n": 47
+        },
+        "tool": {
+          "fpr": 0,
+          "n": 14
+        },
+        "brand": {
+          "fpr": 0.2631578947368421,
+          "n": 19
+        },
+        "medical": {
+          "fpr": 0.4230769230769231,
+          "n": 26
+        }
+      },
       "p50": 0.020249999999577994,
       "p95": 0.08950000000004366,
       "costPer1k": 0,
@@ -94,6 +191,39 @@
         "tr": 0,
         "ja": 0
       },
+      "byLanguageN": {
+        "en": 13731,
+        "und": 1087,
+        "ar": 72,
+        "de": 53,
+        "es": 50,
+        "fr": 35,
+        "he": 69,
+        "hi": 32,
+        "id": 51,
+        "it": 39,
+        "nl": 44,
+        "pl": 46,
+        "pt": 33,
+        "ru": 83,
+        "tr": 29,
+        "ja": 47
+      },
+      "evasionN": {
+        "leetspeak": 1040,
+        "homoglyph": 791,
+        "separator": 864,
+        "zero_width": 647,
+        "repeated_chars": 824,
+        "diacritics": 623,
+        "fullwidth": 408,
+        "combining_marks": 410,
+        "mixed_script": 391,
+        "phonetic": 498,
+        "reversed": 429,
+        "concatenation": 428,
+        "case_mixing": 629
+      },
       "file": "2026-09-24-14-29-32-dev.json"
     },
     {
@@ -105,6 +235,36 @@
       "precision": 0.8548931383577053,
       "recall": 0.07747196738022426,
       "trapFpr": 0.12475247524752475,
+      "traps": {
+        "place": {
+          "fpr": 0.013157894736842105,
+          "n": 76
+        },
+        "surname": {
+          "fpr": 0.12631578947368421,
+          "n": 95
+        },
+        "word": {
+          "fpr": 0.039473684210526314,
+          "n": 228
+        },
+        "animal": {
+          "fpr": 0.5106382978723404,
+          "n": 47
+        },
+        "tool": {
+          "fpr": 0.14285714285714285,
+          "n": 14
+        },
+        "brand": {
+          "fpr": 0.3157894736842105,
+          "n": 19
+        },
+        "medical": {
+          "fpr": 0.34615384615384615,
+          "n": 26
+        }
+      },
       "p50": 0.300916999999572,
       "p95": 0.4562500000010914,
       "costPer1k": 0,
@@ -141,6 +301,39 @@
         "tr": 0.13333333333333333,
         "ja": 0
       },
+      "byLanguageN": {
+        "en": 13731,
+        "und": 1087,
+        "ar": 72,
+        "de": 53,
+        "es": 50,
+        "fr": 35,
+        "he": 69,
+        "hi": 32,
+        "id": 51,
+        "it": 39,
+        "nl": 44,
+        "pl": 46,
+        "pt": 33,
+        "ru": 83,
+        "tr": 29,
+        "ja": 47
+      },
+      "evasionN": {
+        "leetspeak": 1040,
+        "homoglyph": 791,
+        "separator": 864,
+        "zero_width": 647,
+        "repeated_chars": 824,
+        "diacritics": 623,
+        "fullwidth": 408,
+        "combining_marks": 410,
+        "mixed_script": 391,
+        "phonetic": 498,
+        "reversed": 429,
+        "concatenation": 428,
+        "case_mixing": 629
+      },
       "file": "2026-09-24-14-29-32-dev.json"
     },
     {
@@ -152,6 +345,36 @@
       "precision": 0.7929155313351499,
       "recall": 0.02966360856269113,
       "trapFpr": 0.08712871287128712,
+      "traps": {
+        "place": {
+          "fpr": 0.013157894736842105,
+          "n": 76
+        },
+        "surname": {
+          "fpr": 0.042105263157894736,
+          "n": 95
+        },
+        "word": {
+          "fpr": 0.02631578947368421,
+          "n": 228
+        },
+        "animal": {
+          "fpr": 0.46808510638297873,
+          "n": 47
+        },
+        "tool": {
+          "fpr": 0,
+          "n": 14
+        },
+        "brand": {
+          "fpr": 0.10526315789473684,
+          "n": 19
+        },
+        "medical": {
+          "fpr": 0.34615384615384615,
+          "n": 26
+        }
+      },
       "p50": 0.0005000000001018634,
       "p95": 0.004499999999097781,
       "costPer1k": 0,
@@ -188,6 +411,39 @@
         "tr": 0,
         "ja": 0
       },
+      "byLanguageN": {
+        "en": 13731,
+        "und": 1087,
+        "ar": 72,
+        "de": 53,
+        "es": 50,
+        "fr": 35,
+        "he": 69,
+        "hi": 32,
+        "id": 51,
+        "it": 39,
+        "nl": 44,
+        "pl": 46,
+        "pt": 33,
+        "ru": 83,
+        "tr": 29,
+        "ja": 47
+      },
+      "evasionN": {
+        "leetspeak": 1040,
+        "homoglyph": 791,
+        "separator": 864,
+        "zero_width": 647,
+        "repeated_chars": 824,
+        "diacritics": 623,
+        "fullwidth": 408,
+        "combining_marks": 410,
+        "mixed_script": 391,
+        "phonetic": 498,
+        "reversed": 429,
+        "concatenation": 428,
+        "case_mixing": 629
+      },
       "file": "2026-09-24-14-29-32-dev.json"
     },
     {
@@ -199,6 +455,36 @@
       "precision": 0.8782383419689119,
       "recall": 0.0691131498470948,
       "trapFpr": 0.11485148514851486,
+      "traps": {
+        "place": {
+          "fpr": 0.013157894736842105,
+          "n": 76
+        },
+        "surname": {
+          "fpr": 0.10526315789473684,
+          "n": 95
+        },
+        "word": {
+          "fpr": 0.039473684210526314,
+          "n": 228
+        },
+        "animal": {
+          "fpr": 0.5106382978723404,
+          "n": 47
+        },
+        "tool": {
+          "fpr": 0.07142857142857142,
+          "n": 14
+        },
+        "brand": {
+          "fpr": 0.21052631578947367,
+          "n": 19
+        },
+        "medical": {
+          "fpr": 0.34615384615384615,
+          "n": 26
+        }
+      },
       "p50": 0.0004169999992882367,
       "p95": 0.00220900000022084,
       "costPer1k": 0,
@@ -235,6 +521,39 @@
         "tr": 0,
         "ja": 0
       },
+      "byLanguageN": {
+        "en": 13731,
+        "und": 1087,
+        "ar": 72,
+        "de": 53,
+        "es": 50,
+        "fr": 35,
+        "he": 69,
+        "hi": 32,
+        "id": 51,
+        "it": 39,
+        "nl": 44,
+        "pl": 46,
+        "pt": 33,
+        "ru": 83,
+        "tr": 29,
+        "ja": 47
+      },
+      "evasionN": {
+        "leetspeak": 1040,
+        "homoglyph": 791,
+        "separator": 864,
+        "zero_width": 647,
+        "repeated_chars": 824,
+        "diacritics": 623,
+        "fullwidth": 408,
+        "combining_marks": 410,
+        "mixed_script": 391,
+        "phonetic": 498,
+        "reversed": 429,
+        "concatenation": 428,
+        "case_mixing": 629
+      },
       "file": "2026-09-24-14-29-32-dev.json"
     },
     {
@@ -246,6 +565,36 @@
       "precision": 0.9318181818181818,
       "recall": 0.13442622950819672,
       "trapFpr": 0.017857142857142856,
+      "traps": {
+        "place": {
+          "fpr": 0.034482758620689655,
+          "n": 29
+        },
+        "surname": {
+          "fpr": 0,
+          "n": 30
+        },
+        "word": {
+          "fpr": 0.02666666666666667,
+          "n": 75
+        },
+        "animal": {
+          "fpr": 0,
+          "n": 15
+        },
+        "tool": {
+          "fpr": 0,
+          "n": 6
+        },
+        "brand": {
+          "fpr": 0,
+          "n": 5
+        },
+        "medical": {
+          "fpr": 0,
+          "n": 8
+        }
+      },
       "p50": 219,
       "p95": 390,
       "costPer1k": 0,
@@ -282,6 +631,39 @@
         "tr": 0,
         "ja": 0
       },
+      "byLanguageN": {
+        "en": 502,
+        "und": 37,
+        "ar": 3,
+        "de": 5,
+        "es": 5,
+        "fr": 5,
+        "he": 5,
+        "hi": 4,
+        "id": 5,
+        "it": 6,
+        "nl": 2,
+        "pl": 5,
+        "pt": 1,
+        "ru": 5,
+        "tr": 4,
+        "ja": 6
+      },
+      "evasionN": {
+        "leetspeak": 22,
+        "homoglyph": 17,
+        "separator": 16,
+        "zero_width": 15,
+        "repeated_chars": 16,
+        "diacritics": 15,
+        "fullwidth": 10,
+        "combining_marks": 9,
+        "mixed_script": 10,
+        "phonetic": 11,
+        "reversed": 10,
+        "concatenation": 10,
+        "case_mixing": 14
+      },
       "file": "2026-09-24-10-51-52-dev.json"
     },
     {
@@ -293,6 +675,36 @@
       "precision": 0.9565217391304348,
       "recall": 0.8655737704918033,
       "trapFpr": 0.05952380952380952,
+      "traps": {
+        "place": {
+          "fpr": 0.06896551724137931,
+          "n": 29
+        },
+        "surname": {
+          "fpr": 0.03333333333333333,
+          "n": 30
+        },
+        "word": {
+          "fpr": 0.02666666666666667,
+          "n": 75
+        },
+        "animal": {
+          "fpr": 0.2,
+          "n": 15
+        },
+        "tool": {
+          "fpr": 0.3333333333333333,
+          "n": 6
+        },
+        "brand": {
+          "fpr": 0,
+          "n": 5
+        },
+        "medical": {
+          "fpr": 0,
+          "n": 8
+        }
+      },
       "p50": 673,
       "p95": 2633,
       "costPer1k": 0,
@@ -329,6 +741,39 @@
         "tr": 0.6666666666666666,
         "ja": 0.888888888888889
       },
+      "byLanguageN": {
+        "en": 502,
+        "und": 37,
+        "ar": 3,
+        "de": 5,
+        "es": 5,
+        "fr": 5,
+        "he": 5,
+        "hi": 4,
+        "id": 5,
+        "it": 6,
+        "nl": 2,
+        "pl": 5,
+        "pt": 1,
+        "ru": 5,
+        "tr": 4,
+        "ja": 6
+      },
+      "evasionN": {
+        "leetspeak": 22,
+        "homoglyph": 17,
+        "separator": 16,
+        "zero_width": 15,
+        "repeated_chars": 16,
+        "diacritics": 15,
+        "fullwidth": 10,
+        "combining_marks": 9,
+        "mixed_script": 10,
+        "phonetic": 11,
+        "reversed": 10,
+        "concatenation": 10,
+        "case_mixing": 14
+      },
       "file": "2026-09-24-11-06-37-dev.json"
     },
     {
@@ -340,6 +785,36 @@
       "precision": 0,
       "recall": 0,
       "trapFpr": 0,
+      "traps": {
+        "place": {
+          "fpr": 0,
+          "n": 29
+        },
+        "surname": {
+          "fpr": 0,
+          "n": 30
+        },
+        "word": {
+          "fpr": 0,
+          "n": 75
+        },
+        "animal": {
+          "fpr": 0,
+          "n": 15
+        },
+        "tool": {
+          "fpr": 0,
+          "n": 6
+        },
+        "brand": {
+          "fpr": 0,
+          "n": 5
+        },
+        "medical": {
+          "fpr": 0,
+          "n": 8
+        }
+      },
       "p50": 0,
       "p95": 2080,
       "costPer1k": 0,
@@ -376,6 +851,39 @@
         "tr": 0,
         "ja": 0
       },
+      "byLanguageN": {
+        "en": 502,
+        "und": 37,
+        "ar": 3,
+        "de": 5,
+        "es": 5,
+        "fr": 5,
+        "he": 5,
+        "hi": 4,
+        "id": 5,
+        "it": 6,
+        "nl": 2,
+        "pl": 5,
+        "pt": 1,
+        "ru": 5,
+        "tr": 4,
+        "ja": 6
+      },
+      "evasionN": {
+        "leetspeak": 22,
+        "homoglyph": 17,
+        "separator": 16,
+        "zero_width": 15,
+        "repeated_chars": 16,
+        "diacritics": 15,
+        "fullwidth": 10,
+        "combining_marks": 9,
+        "mixed_script": 10,
+        "phonetic": 11,
+        "reversed": 10,
+        "concatenation": 10,
+        "case_mixing": 14
+      },
       "file": "2026-09-24-11-06-35-dev.json"
     },
     {
@@ -387,6 +895,36 @@
       "precision": 0.9902755267423015,
       "recall": 0.1868692017534917,
       "trapFpr": 0.0297029702970297,
+      "traps": {
+        "place": {
+          "fpr": 0,
+          "n": 76
+        },
+        "surname": {
+          "fpr": 0,
+          "n": 95
+        },
+        "word": {
+          "fpr": 0.008771929824561403,
+          "n": 228
+        },
+        "animal": {
+          "fpr": 0.23404255319148937,
+          "n": 47
+        },
+        "tool": {
+          "fpr": 0,
+          "n": 14
+        },
+        "brand": {
+          "fpr": 0.05263157894736842,
+          "n": 19
+        },
+        "medical": {
+          "fpr": 0.038461538461538464,
+          "n": 26
+        }
+      },
       "p50": 237,
       "p95": 274,
       "costPer1k": 0,
@@ -423,6 +961,39 @@
         "tr": 0,
         "ja": 0.41379310344827586
       },
+      "byLanguageN": {
+        "en": 13731,
+        "und": 1087,
+        "ar": 72,
+        "de": 53,
+        "es": 50,
+        "fr": 35,
+        "he": 69,
+        "hi": 32,
+        "id": 51,
+        "it": 39,
+        "nl": 44,
+        "pl": 46,
+        "pt": 33,
+        "ru": 83,
+        "tr": 29,
+        "ja": 47
+      },
+      "evasionN": {
+        "leetspeak": 1040,
+        "homoglyph": 791,
+        "separator": 864,
+        "zero_width": 647,
+        "repeated_chars": 824,
+        "diacritics": 623,
+        "fullwidth": 408,
+        "combining_marks": 410,
+        "mixed_script": 391,
+        "phonetic": 498,
+        "reversed": 429,
+        "concatenation": 428,
+        "case_mixing": 629
+      },
       "file": "2026-09-28-02-10-51-dev.json"
     },
     {
@@ -434,6 +1005,36 @@
       "precision": 0.947511760336717,
       "recall": 0.3901519013151188,
       "trapFpr": 0.031683168316831684,
+      "traps": {
+        "place": {
+          "fpr": 0.013157894736842105,
+          "n": 76
+        },
+        "surname": {
+          "fpr": 0.010526315789473684,
+          "n": 95
+        },
+        "word": {
+          "fpr": 0.03070175438596491,
+          "n": 228
+        },
+        "animal": {
+          "fpr": 0.10638297872340426,
+          "n": 47
+        },
+        "tool": {
+          "fpr": 0,
+          "n": 14
+        },
+        "brand": {
+          "fpr": 0.10526315789473684,
+          "n": 19
+        },
+        "medical": {
+          "fpr": 0,
+          "n": 26
+        }
+      },
       "p50": 820.7611660002731,
       "p95": 1160.2854999999981,
       "costPer1k": 0,
@@ -469,6 +1070,39 @@
         "ru": 0.5045045045045045,
         "tr": 0,
         "ja": 0.32727272727272727
+      },
+      "byLanguageN": {
+        "en": 13731,
+        "und": 1087,
+        "ar": 72,
+        "de": 53,
+        "es": 50,
+        "fr": 35,
+        "he": 69,
+        "hi": 32,
+        "id": 51,
+        "it": 39,
+        "nl": 44,
+        "pl": 46,
+        "pt": 33,
+        "ru": 83,
+        "tr": 29,
+        "ja": 47
+      },
+      "evasionN": {
+        "leetspeak": 1040,
+        "homoglyph": 791,
+        "separator": 864,
+        "zero_width": 647,
+        "repeated_chars": 824,
+        "diacritics": 623,
+        "fullwidth": 408,
+        "combining_marks": 410,
+        "mixed_script": 391,
+        "phonetic": 498,
+        "reversed": 429,
+        "concatenation": 428,
+        "case_mixing": 629
       },
       "file": "2026-09-28-08-29-25-dev.json"
     }
