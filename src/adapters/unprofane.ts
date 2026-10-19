@@ -6,14 +6,18 @@
  * rules are unsure. An item is flagged when the engine matched anything,
  * or, for balanced, when the standard policy did not allow it.
  *
- * Items go out 100 to a request through the batch endpoint, so a full run
- * is about 155 requests.
+ * Items go out through the batch endpoint, up to 100 and 30,000
+ * characters to a request (the most the API reads in one batch), so a full
+ * run is about 160 requests.
  */
 import { type CheckResponse, Unprofane } from '@unprofane/sdk';
 import type { Adapter } from '../adapter.ts';
 import type { CorpusItem } from '../corpus.ts';
 
 type Mode = 'fast' | 'balanced';
+/** The most items and characters, every text together, one batch holds. */
+const BATCH_ITEMS = 100;
+const BATCH_CHARS = 30_000;
 
 function batcher(client: Unprofane, mode: Mode) {
   let pending: Array<{
@@ -21,12 +25,14 @@ function batcher(client: Unprofane, mode: Mode) {
     resolve: (r: CheckResponse) => void;
     reject: (e: unknown) => void;
   }> = [];
+  let chars = 0;
   let timer: ReturnType<typeof setTimeout> | undefined;
   const flush = async () => {
     if (timer) clearTimeout(timer);
     timer = undefined;
     const batch = pending;
     pending = [];
+    chars = 0;
     if (!batch.length) return;
     try {
       const res = await client.checkBatch({
@@ -51,8 +57,10 @@ function batcher(client: Unprofane, mode: Mode) {
   };
   return (item: CorpusItem) =>
     new Promise<CheckResponse>((resolve, reject) => {
+      if (pending.length > 0 && chars + item.text.length > BATCH_CHARS) void flush();
       pending.push({ item, resolve, reject });
-      if (pending.length >= 100) void flush();
+      chars += item.text.length;
+      if (pending.length >= BATCH_ITEMS) void flush();
       else if (!timer) timer = setTimeout(flush, 25);
     });
 }
@@ -64,7 +72,8 @@ export function unprofaneAdapter(mode: Mode): Adapter {
     name: `unprofane-${mode}`,
     version: 'api',
     cacheable: true,
-    // The runner keeps this many items in flight; the batcher packs them 100 to a request.
+    // The runner keeps this many items in flight; the batcher packs them up
+    // to 100 and 30,000 characters to a request.
     concurrency: 200,
     available: async () => (send ? null : 'no UNPROFANE_API_KEY'),
     async run(item) {

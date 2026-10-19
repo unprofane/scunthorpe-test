@@ -20,14 +20,14 @@ item is made, labelled and scored, and which systems may be run, is in
 
 ## Leaderboard
 
-The dev split, as unprofane.com prints it (`results/leaderboard.json`, generated 2026-10-17). Trap FPR is the share of innocent items a system flagged: lower is better. The Workers AI rows ran on a 600-item sample.
+The dev split, as unprofane.com prints it (`results/leaderboard.json`, generated 2026-10-19). Trap FPR is the share of innocent items a system flagged: lower is better. The Workers AI rows ran on a 600-item sample.
 
 | System | Version | Items | F1 | Precision | Recall | Trap FPR |
 |---|---|---|---|---|---|---|
-| unprofane-fast | 2026-09-29 | 15,530 | 0.919 | 0.996 | 0.852 | 0.0% |
+| unprofane-fast | 2026-10-18 | 15,550 | 0.919 | 0.996 | 0.853 | 0.0% |
 | workers-ai-llama-3.3-70b | @cf/meta/llama-3.3-70b-instruct-fp8-fast | 600 | 0.909 | 0.957 | 0.866 | 6.0% |
 | openai-moderation | omni-moderation-latest | 15,501 | 0.553 | 0.948 | 0.390 | 3.2% |
-| obscenity | 0.4.6 | 15,501 | 0.364 | 0.930 | 0.227 | 21.2% |
+| obscenity | 0.4.6 | 15,550 | 0.364 | 0.928 | 0.227 | 20.2% |
 | perspective | v1alpha1 | 15,501 | 0.314 | 0.990 | 0.187 | 3.0% |
 | workers-ai-llama-guard-3-8b | @cf/meta/llama-guard-3-8b | 600 | 0.235 | 0.932 | 0.134 | 1.8% |
 | bad-words | 4.1.5 | 15,501 | 0.142 | 0.855 | 0.077 | 12.5% |
