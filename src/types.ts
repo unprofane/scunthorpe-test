@@ -5,6 +5,8 @@
  */
 export type Action = 'allow' | 'review' | 'block';
 export type PolicyPreset = 'kids' | 'teen' | 'standard' | 'strict';
+/** The presets the corpus gives an action for: every one this repository knows. */
+export type CalibratedPreset = PolicyPreset;
 export type EvasionTag = string;
 export type Context = string;
 export type Language = string;

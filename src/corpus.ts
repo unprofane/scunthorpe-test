@@ -4,7 +4,7 @@
  * reads it, and only for a report.
  */
 import { readFileSync } from 'node:fs';
-import type { Action, EvasionTag, PolicyPreset } from './types.ts';
+import type { Action, CalibratedPreset, EvasionTag } from './types.ts';
 import type { Context, Language, Severity } from './types.ts';
 
 export type CorpusCategory =
@@ -28,7 +28,7 @@ export interface CorpusItem {
   subkind?: string;
   expected: {
     flagged: boolean;
-    action_by_policy: Record<PolicyPreset, Action>;
+    action_by_policy: Record<CalibratedPreset, Action>;
     categories: string[];
     severity: Severity | 'none';
     evasion: EvasionTag[];
