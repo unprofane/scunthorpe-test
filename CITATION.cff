@@ -14,6 +14,11 @@ abstract: >-
 authors:
   - name: Unprofane
     website: https://unprofane.com
+doi: 10.5281/zenodo.23616173
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23616173
+    description: Every version, archived on Zenodo
 repository-code: https://github.com/unprofane/scunthorpe-test
 url: https://unprofane.com/bench/scunthorpe/
 license:

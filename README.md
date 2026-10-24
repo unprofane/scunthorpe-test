@@ -1,5 +1,7 @@
 # The Scunthorpe Test
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23616173.svg)](https://doi.org/10.5281/zenodo.23616173)
+
 A profanity-filter benchmark where blocking Scunthorpe counts against you.
 
 Every profanity-filter benchmark we could find measured one thing: how much
@@ -76,5 +78,9 @@ are reported on both, so a filter fitted to the public set is caught.
 
 Data: CC BY 4.0, with each item's own licence where it differs
 ([DATA-LICENSE.md](DATA-LICENSE.md)). Code: MIT ([LICENSE](LICENSE)).
+
+## Cite it
+
+Each release is archived on Zenodo: [doi:10.5281/zenodo.23616173](https://doi.org/10.5281/zenodo.23616173) names every version, and `CITATION.cff` gives GitHub's "Cite this repository" the same record.
 
 Results and the method on the web: https://unprofane.com/bench/scunthorpe/
