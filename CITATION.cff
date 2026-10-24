@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: If you use the Scunthorpe Test, please cite it as below.
+type: dataset
+title: 'The Scunthorpe Test: a profanity-filter benchmark where blocking Scunthorpe counts against you'
+abstract: >-
+  A benchmark for profanity filters that reports how many innocent words a
+  filter blocks beside how much profanity it catches: plain profanity, every
+  disguise technique alone and combined (leetspeak, homoglyphs, spacing,
+  zero-width characters), usernames, contextual cases, a Civil Comments
+  sample of running text, and innocent words and phrases that contain a
+  profane string, such as Scunthorpe. Each label is a function of the data.
+  This repository carries the public dev split, the runner, adapters for
+  open-source filters and the published results.
+authors:
+  - name: Unprofane
+    website: https://unprofane.com
+repository-code: https://github.com/unprofane/scunthorpe-test
+url: https://unprofane.com/bench/scunthorpe/
+license:
+  - MIT
+  - CC-BY-4.0
+keywords:
+  - profanity
+  - profanity filter
+  - content moderation
+  - toxicity
+  - false positives
+  - Scunthorpe problem
+  - benchmark
+version: 1.0.0
+date-released: '2026-10-24'
