@@ -22,7 +22,7 @@ item is made, labelled and scored, and which systems may be run, is in
 
 ## Leaderboard
 
-The dev split, as unprofane.com prints it (`results/leaderboard.json`, generated 2026-10-24). Trap FPR is the share of innocent items a system flagged: lower is better. The Workers AI rows ran on a 600-item sample.
+The dev split, as unprofane.com prints it (`results/leaderboard.json`, generated 2026-10-25). Trap FPR is the share of innocent items a system flagged: lower is better. The Workers AI rows ran on a 600-item sample.
 
 | System | Version | Items | F1 | Precision | Recall | Trap FPR |
 |---|---|---|---|---|---|---|
